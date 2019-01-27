@@ -23,9 +23,7 @@ export default class Programmer extends Vue {}
 @import "../../lib/colors.less";
 
 .programmer {
-  display: flex;
   height: 15vw;
-  justify-content: center;
   position: relative;
   width: 50vw;
 }
@@ -38,7 +36,7 @@ export default class Programmer extends Vue {}
   position: absolute;
   top: 10%;
   width: 12%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .body {
@@ -54,6 +52,9 @@ export default class Programmer extends Vue {}
 }
 
 .right-arm-upper {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: right-arm-upper;
   background-color: @CYAN6;
   border-radius: 100px;
   height: 20%;
@@ -66,6 +67,9 @@ export default class Programmer extends Vue {}
 }
 
 .right-arm-lower {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: right-arm-lower;
   background-color: @CYAN6;
   border-radius: 100px;
   height: 20%;
@@ -78,30 +82,39 @@ export default class Programmer extends Vue {}
 }
 
 .left-arm-upper {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: left-arm-upper;
   background-color: @CYAN6;
   border-radius: 100px;
   height: 20%;
   left: 55%;
   position: absolute;
-  top: 46%;
-  transform: rotate(20deg);
-  width: 15%;
-  z-index: 2;
-}
-
-.left-arm-lower {
-  background-color: @CYAN6;
-  border-radius: 100px;
-  height: 20%;
-  left: 55%;
-  position: absolute;
-  top: 57%;
+  top: 35%;
   transform: rotate(-20deg);
   width: 15%;
   z-index: 2;
 }
 
+.left-arm-lower {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: left-arm-lower;
+  background-color: @CYAN6;
+  border-radius: 100px;
+  height: 20%;
+  left: 55%;
+  position: absolute;
+  top: 23%;
+  transform: rotate(20deg);
+  width: 15%;
+  z-index: 4;
+}
+
 .laptop-top {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: laptop-top;
   background-color: @GRAY6;
   border-radius: 6px;
   left: 41%;
@@ -109,17 +122,20 @@ export default class Programmer extends Vue {}
   height: 40%;
   position: absolute;
   top: 57%;
-  z-index: 3;
+  z-index: 5;
 }
 
 .laptop-bottom {
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: laptop-bottom;
   background-color: @GRAY6;
   left: 41%;
   width: 20%;
   height: 3%;
   position: absolute;
   top: 97%;
-  z-index: 3;
+  z-index: 5;
 }
 
 .laptop-logo {
@@ -130,7 +146,105 @@ export default class Programmer extends Vue {}
   height: 16%;
   position: absolute;
   width: 5%;
-  z-index: 4;
+  z-index: 6;
+}
+
+@keyframes left-arm-lower {
+  0%  {
+    top: 23%;
+    transform: rotate(20deg);
+  }
+  50% {
+    top: 57%;
+    transform: rotate(-20deg);
+  }
+  100% {
+    top: 23%;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes left-arm-upper {
+  0%  {
+    top: 35%;
+    transform: rotate(-20deg);
+  }
+  50% {
+    top: 46%;
+    transform: rotate(20deg);
+  }
+  100% {
+    top: 35%;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes right-arm-lower {
+  0%  {
+    top: 57%;
+    transform: rotate(20deg);
+  }
+  50% {
+    top: 23%;
+    transform: rotate(-20deg);
+  }
+  100% {
+    top: 57%;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes right-arm-upper {
+  0%  {
+    top: 46%;
+    transform: rotate(-20deg);
+  }
+  50% {
+    top: 35%;
+    transform: rotate(20deg);
+  }
+  100% {
+    top: 46%;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes laptop-top {
+  3%  {
+    top: 57%;
+    transform: rotate(-5deg);
+  }
+  49% {
+    top: 57%;
+    transform: rotate(0deg);
+  }
+  53% {
+    top: 57%;
+    transform: rotate(5deg);
+  }
+  99% {
+    top: 57%;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes laptop-bottom {
+  3%  {
+    top: 97%;
+    transform: rotate(-5deg);
+  }
+  49% {
+    top: 97%;
+    transform: rotate(0deg);
+  }
+  53% {
+    top: 97%;
+    transform: rotate(5deg);
+  }
+  99% {
+    top: 97%;
+    transform: rotate(0deg);
+  }
 }
 
 </style>

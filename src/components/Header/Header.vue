@@ -1,7 +1,10 @@
 <template>
   <div class="header">
     <BastionTheX class="bastion-the-x" />
-    <h2> Frontend dev by day, dancer by night</h2>
+    <div class="subheaders">
+      <h2> Frontend Dev by Day </h2>
+      <h2> Dancer by Night </h2>
+    </div>
     <div class="animations">
       <Programmer />
       <div class="separator" />
@@ -30,7 +33,7 @@ export default class Header extends Vue {}
 @import "../../lib/colors.less";
 
 .bastion-the-x {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .header {
@@ -42,6 +45,13 @@ export default class Header extends Vue {}
 h2 {
   color: @GRAY7;
   font-size: 1.4em;
+}
+
+.subheaders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 20px;
 }
 
 .animations {
