@@ -2,7 +2,11 @@
   <div class="header">
     <BastionTheX class="bastion-the-x" />
     <h2> Frontend dev by day, dancer by night</h2>
-    <Dancers />
+    <div class="animations">
+      <Programmer />
+      <div class="separator" />
+      <Dancers />
+    </div>
   </div>
 </template>
 
@@ -10,11 +14,13 @@
 import { Component, Vue } from "vue-property-decorator";
 import BastionTheX from "./BastionTheX.vue";
 import Dancers from "./Dancers.vue";
+import Programmer from "./Programmer.vue";
 
 @Component({
   components: {
     BastionTheX,
-    Dancers
+    Dancers,
+    Programmer
   }
 })
 export default class Header extends Vue {}
@@ -36,5 +42,17 @@ export default class Header extends Vue {}
 h2 {
   color: @GRAY7;
   font-size: 1.4em;
+}
+
+.animations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.separator {
+  width: 1px;
+  height: 15vw;
+  background: @GRAY9;
 }
 </style>
