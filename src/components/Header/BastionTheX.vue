@@ -18,7 +18,13 @@ const NAMES = [
   "Friend",
   "Foe",
   "Student",
-  "Mentor"
+  "Mentor",
+  "Programmer",
+  "Director",
+  "User",
+  "Roleplayer",
+  "Reviewer",
+  "Lead"
 ];
 
 const REFRESH_RATE = 1500;
