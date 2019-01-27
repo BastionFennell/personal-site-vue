@@ -1,0 +1,155 @@
+<template>
+  <div class="dancers">
+    <div class="lead">
+      <div class="l-head" />
+      <div class="l-right-arm-upper" />
+      <div class="l-right-arm-lower" />
+      <div class="l-body" />
+      <div class="l-left-arm-upper" />
+      <div class="l-left-arm-lower" />
+    </div>
+    <div class="follow">
+      <div class="f-head" />
+      <div class="f-right-arm" />
+      <div class="f-body" />
+      <div class="f-left-arm" />
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component
+export default class Dancers extends Vue {}
+</script>
+
+<style scoped lang="less">
+@import "../../lib/colors.less";
+
+.dancers {
+  display: flex;
+  justify-content: space-around;
+  height: 30vw;
+}
+
+.lead {
+  height: 100%;
+  position: relative;
+  width: 40%;
+}
+
+.l-head {
+  background-color: pink;
+  border-radius: 70%;
+  height: 40%;
+  width: 30%;
+  left: 55%;
+  position: absolute;
+  z-index: 5;
+}
+
+.l-body {
+  background-color: @CYAN5;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  height: 70%;
+  left: 46%;
+  position: absolute;
+  top: 25%;
+  width: 40%;
+  z-index: 2;
+}
+
+.l-left-arm-upper {
+  background-color: @CYAN6;
+  border-bottom-right-radius: 30px;
+  height: 15%;
+  left: 60%;
+  position: absolute;
+  top: 40%;
+  transform: rotate(30deg);
+  width: 40%;
+  z-index: 1;
+}
+
+.l-left-arm-lower {
+  background-color: @CYAN6;
+  border-bottom-left-radius: 62%;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+  height: 15%;
+  left: 90%;
+  position: absolute;
+  top: 53%;
+  transform: rotate(10deg);
+  width: 30%;
+  z-index: 1;
+}
+
+.l-right-arm-upper {
+  background-color: @CYAN4;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 100px;
+  height: 15%;
+  left: 27%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(130deg);
+  width: 35%;
+  z-index: 6;
+}
+
+.l-right-arm-lower {
+  background-color: @CYAN4;
+  border-radius: 100px;
+  height: 15%;
+  left: 20%;
+  position: absolute;
+  top: 78%;
+  transform: rotate(90deg);
+  width: 30%;
+  z-index: 6;
+}
+
+.follow {
+  height: 100%;
+  position: relative;
+  width: 40%;
+}
+
+.f-head {
+  background-color: pink;
+  border-radius: 70%;
+  height: 40%;
+  width: 30%;
+  left: 55%;
+  position: absolute;
+  z-index: 5;
+}
+
+.f-body {
+  background-color: @CYAN5;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  height: 70%;
+  left: 46%;
+  position: absolute;
+  top: 25%;
+  width: 40%;
+  z-index: 2;
+}
+
+.f-left-arm-upper {
+  background-color: @CYAN6;
+  border-bottom-right-radius: 30px;
+  height: 15%;
+  left: 60%;
+  position: absolute;
+  top: 40%;
+  transform: rotate(30deg);
+  width: 40%;
+  z-index: 1;
+}
+</style>

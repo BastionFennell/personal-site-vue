@@ -1,7 +1,7 @@
 <template>
   <div class="bastion-the-x">
     <div class="title-text">
-      <h2>Bastion The&nbsp;{{ name }}</h2>
+      <h1>Bastion The<span class="name">{{ name }}</span></h1>
       <div v-bind:style="cursorStyle" />
     </div>
   </div>
@@ -108,6 +108,8 @@ export default class BastionTheX extends Vue {
 </script>
 
 <style scoped lang="less">
+@import "../../lib/colors.less";
+
 .bastion-the-x {
   display: flex;
   flex-direction: row;
@@ -121,7 +123,12 @@ export default class BastionTheX extends Vue {
   align-items: center;
 }
 
-h2 {
+h1 {
   margin: 0;
+}
+
+.name {
+  color: @CYAN8;
+  margin-left: 10px;
 }
 </style>
