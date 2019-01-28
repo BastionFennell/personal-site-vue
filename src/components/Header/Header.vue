@@ -2,8 +2,8 @@
   <div class="header">
     <BastionTheX class="bastion-the-x" />
     <div class="subheaders">
-      <h2> Frontend Dev by Day </h2>
-      <h2> Dancer by Night </h2>
+      <h2>Frontend Dev by Day</h2>
+      <h2>Dancer by Night</h2>
     </div>
     <div class="animations">
       <Programmer />

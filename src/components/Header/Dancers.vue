@@ -188,7 +188,7 @@ export default class Dancers extends Vue {}
   animation-iteration-count: infinite;
   animation-name: f-right-arm-lower;
   background-color: @GREEN6;
-  border-bottom-right-radius: 100px;;
+  border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
   border-top-left-radius: 100px;
   height: 15%;
@@ -233,7 +233,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes l-head {
-  0%  {
+  0% {
     left: 40%;
   }
   50% {
@@ -244,9 +244,8 @@ export default class Dancers extends Vue {}
   }
 }
 
-
 @keyframes l-body {
-  0%  {
+  0% {
     left: 31%;
     transform: none;
   }
@@ -261,19 +260,19 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes l-left-arm-lower {
-  0%  {
+  0% {
     top: 51%;
   }
   50% {
     top: 48%;
   }
   100% {
-    top: 51%
+    top: 51%;
   }
 }
 
 @keyframes l-left-arm-upper {
-  0%  {
+  0% {
     left: 45%;
     top: 40%;
     transform: rotate(30deg);
@@ -291,7 +290,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes l-right-arm-upper {
-  0%  {
+  0% {
     left: 12%;
     top: 50%;
     transform: rotate(130deg);
@@ -309,7 +308,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes l-right-arm-lower {
-  0%  {
+  0% {
     left: 5%;
     top: 78%;
     transform: rotate(90deg);
@@ -327,7 +326,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes f-head {
-  0%  {
+  0% {
     left: 30%;
   }
   50% {
@@ -339,7 +338,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes f-body {
-  0%  {
+  0% {
     left: 31%;
     transform: none;
   }
@@ -354,19 +353,19 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes f-right-arm-lower {
-  0%  {
+  0% {
     top: 51%;
   }
   50% {
     top: 48%;
   }
   100% {
-    top: 51%
+    top: 51%;
   }
 }
 
 @keyframes f-right-arm-upper {
-  0%  {
+  0% {
     left: 15%;
     top: 40%;
     transform: rotate(-30deg);
@@ -384,7 +383,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes f-left-arm-upper {
-  0%  {
+  0% {
     left: 55%;
     top: 50%;
     transform: rotate(-130deg);
@@ -402,7 +401,7 @@ export default class Dancers extends Vue {}
 }
 
 @keyframes f-left-arm-lower {
-  0%  {
+  0% {
     left: 67%;
     top: 78%;
     transform: rotate(-90deg);
