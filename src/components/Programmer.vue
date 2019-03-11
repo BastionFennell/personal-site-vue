@@ -20,12 +20,12 @@ export default class Programmer extends Vue {}
 </script>
 
 <style scoped lang="less">
-@import "../../lib/colors.less";
+@import "../lib/colors.less";
 
 .programmer {
-  height: 15vw;
+  height: 30vw;
   position: relative;
-  width: 50vw;
+  width: 100vw;
 }
 
 .head {
@@ -78,7 +78,7 @@ export default class Programmer extends Vue {}
   top: 57%;
   transform: rotate(20deg);
   width: 15%;
-  z-index: 2;
+  z-index: 4;
 }
 
 .left-arm-upper {

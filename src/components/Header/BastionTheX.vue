@@ -130,6 +130,7 @@ export default class BastionTheX extends Vue {
 }
 
 h1 {
+  font-size: 4em;
   margin: 0;
 }
 
