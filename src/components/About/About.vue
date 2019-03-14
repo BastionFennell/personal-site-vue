@@ -138,7 +138,7 @@ h3 {
 }
 
 .card {
-  background: white;
+  background: transparent;
   border-radius: 8px;
   font-size: 18px;
   margin: 0 auto;
@@ -146,6 +146,12 @@ h3 {
   min-height: 500px;
   padding: 20px;
   text-align: center;
+}
+
+@media (min-width: 700px) {
+  .card {
+    background: white;
+  }
 }
 
 .card__label {
@@ -181,17 +187,29 @@ li {
 
 .portfolio__grid {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 400px;
+  padding: 0 15px
 }
 
 .portfolio__card {
   border: 1px solid black;
   border-radius: 8px;
   display: flex;
-  height: 250px;
+  flex-direction: column;
   margin: 20px 0 10px 0;
   overflow: hidden;
   width: 100%;
+}
+
+@media (min-width: 700px) {
+  .portfolio__grid {
+    max-width: 800px;
+  }
+
+  .portfolio__card {
+    flex-direction: row !important;
+    height: 250px;
+  }
 }
 
 .portfolio__card-picture {
@@ -213,8 +231,9 @@ li {
 
 .contact {
   background: @CYAN8;
-  color: @GRAY1;
+  color: white;
   padding-bottom: 100px;
+  padding-top: 40px;
   position: relative;
 
   h3 {
@@ -226,7 +245,7 @@ li {
     border-color: transparent transparent @CYAN8 transparent;
     border-style: solid;
     border-width: 0 0 60px 100vw;
-    top: -60px;
+    top: -59px;
     content: " ";
     display: block;
     left: 0;
@@ -239,10 +258,10 @@ li {
   display: flex;
   justify-content: space-around;
   margin: 30px auto;
-  width: 800px;
+  max-width: 800px;
 
   a {
-    color: @GRAY1;
+    color: white;
     text-decoration: none !important;
     transition: color 0.4s ease;
 

@@ -23,9 +23,22 @@ export default class App extends Vue {}
 @import "lib/colors.less";
 
 body {
-  font-size: 18px;
+  font-size: 8px;
   margin: 0;
 }
+
+@media (min-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 850px) {
+  body {
+    font-size: 18px;
+  }
+}
+
 
 #app {
   background: @GRAY1;
