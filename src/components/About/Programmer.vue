@@ -20,7 +20,7 @@ export default class Programmer extends Vue {}
 </script>
 
 <style scoped lang="less">
-@import "../lib/colors.less";
+@import "../../lib/colors.less";
 
 .programmer {
   height: 30vw;

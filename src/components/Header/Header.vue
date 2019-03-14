@@ -7,8 +7,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import BastionTheX from "./BastionTheX.vue";
-import Dancers from "./Dancers.vue";
-import Programmer from "./Programmer.vue";
 
 @Component({
   components: {
