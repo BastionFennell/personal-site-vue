@@ -25,6 +25,7 @@ export default class App extends Vue {}
 body {
   font-size: 8px;
   margin: 0;
+  overflow-x: hidden;
 }
 
 @media (min-width: 700px) {
@@ -46,5 +47,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: @GRAY10;
+  overflow-x: hidden;
 }
 </style>

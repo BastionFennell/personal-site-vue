@@ -41,21 +41,23 @@
     <div class="portfolio">
       <h3> What have I done so far? </h3>
       <div class="portfolio__grid">
-        <div class="portfolio__card">
-          <div class="portfolio__card-picture">
-            <img src="./monster-mayhem.png" alt="Monster Mayhem WCS"/>
+        <a href="https://monstermayhem.dance">
+          <div class="portfolio__card">
+            <div class="portfolio__card-picture">
+              <img src="./monster-mayhem.png" alt="Monster Mayhem WCS"/>
+            </div>
+            <div class="portfolio__card-summary">
+              <h4> Monster Mayhem West Coast Swing </h4>
+              <p>
+                A weekend long dance event that I built and organize.
+                I <strong>designed the layout</strong> of the site,
+                built the site using <strong>React.js</strong>,
+                and deployed the site using Amazon <strong>S3</strong> and <strong>Cloudfront</strong>.
+                I also handled the social media presence and marketing for the event.
+              </p>
+            </div>
           </div>
-          <div class="portfolio__card-summary">
-            <h4> Monster Mayhem West Coast Swing </h4>
-            <p>
-              A weekend long dance event that I built and organize.
-              I <strong>designed the layout</strong> of the site,
-              built the site using <strong>React.js</strong>,
-              and deployed the site using Amazon <strong>S3</strong> and <strong>Cloudfront</strong>.
-              I also handled the social media presence and marketing for the event.
-            </p>
-          </div>
-        </div>
+        </a>
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
             <img src="./clicker.gif" alt="Code Clicker"/>
@@ -123,6 +125,7 @@ export default class About extends Vue {}
   content: " ";
   display: block;
   left: 0;
+  overflow-x: hidden;
   position: absolute;
 }
 
@@ -188,7 +191,12 @@ li {
 .portfolio__grid {
   margin: 0 auto;
   max-width: 400px;
-  padding: 0 15px
+  padding: 0 15px;
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 }
 
 .portfolio__card {
@@ -198,7 +206,14 @@ li {
   flex-direction: column;
   margin: 20px 0 10px 0;
   overflow: hidden;
+  transition: all 0.3s ease;
   width: 100%;
+
+  &:hover {
+    box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 @media (min-width: 700px) {
