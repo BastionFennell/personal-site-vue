@@ -30,7 +30,7 @@ export default class Programmer extends Vue {}
 
 .head {
   background-color: pink;
-  border-radius: 100px;
+  border-radius: 50%;
   height: 40%;
   left: 45%;
   position: absolute;
@@ -41,8 +41,8 @@ export default class Programmer extends Vue {}
 
 .body {
   background-color: @CYAN5;
-  border-top-left-radius: 80px;
-  border-top-right-radius: 80px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   height: 70%;
   left: 41%;
   position: absolute;
