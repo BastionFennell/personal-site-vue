@@ -59,6 +59,7 @@ i {
   animation-name: caret-bounce;
   bottom: 100px;
   left: 50%;
+  left: calc(50% - 30px);
   position: absolute;
 }
 
