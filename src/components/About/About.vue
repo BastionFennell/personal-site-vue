@@ -39,25 +39,28 @@
       </div>
     </div>
     <div class="portfolio">
-      <h3> What have I done so far? </h3>
+      <h3> What have I done recently? </h3>
       <div class="portfolio__grid">
-        <a href="https://monstermayhem.dance">
-          <div class="portfolio__card">
+        <div class="portfolio__card">
             <div class="portfolio__card-picture">
               <img src="./monster-mayhem.png" alt="Monster Mayhem WCS"/>
             </div>
             <div class="portfolio__card-summary">
-              <h4> Monster Mayhem West Coast Swing </h4>
-              <p>
-                A weekend long dance event that I built and organize.
-                I <strong>designed the layout</strong> of the site,
-                built the site using <strong>React.js</strong>,
-                and deployed the site using Amazon <strong>S3</strong> and <strong>Cloudfront</strong>.
-                I also handled the social media presence and marketing for the event.
-              </p>
+                <h4> Monster Mayhem </h4>
+                <p>
+                  A weekend long dance event that I built and organize.
+                  I <strong>designed the layout</strong> of the site,
+                  built the site using <strong>React.js</strong>,
+                  and deployed the site using Amazon <strong>S3</strong> and <strong>Cloudfront</strong>.
+                  I also handled the social media and marketing for the event.
+                </p>
+              <a href="https://monstermayhem.dance">
+                <button class="portfolio__see-more">
+                  View Project
+                </button>
+              </a>
             </div>
-          </div>
-        </a>
+        </div>
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
             <img src="./clicker.gif" alt="Code Clicker"/>
@@ -189,6 +192,9 @@ li {
 }
 
 .portfolio__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 0 auto;
   max-width: 400px;
   padding: 0 15px;
@@ -202,34 +208,22 @@ li {
 .portfolio__card {
   border: 1px solid black;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 10px 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 350px;
+  margin: 20px 15px 10px 15px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  width: 100%;
-
-  &:hover {
-    box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.2),
-    0px 3px 4px 0px rgba(0, 0, 0, 0.14),
-    0px 3px 3px -2px rgba(0, 0, 0, 0.12);
-  }
+  position: relative;
+  width: 350px;
 }
 
 @media (min-width: 700px) {
   .portfolio__grid {
     max-width: 800px;
   }
-
-  .portfolio__card {
-    flex-direction: row !important;
-    height: 250px;
-  }
 }
 
 .portfolio__card-picture {
-  flex: 1;
-
   img {
     height: 100%;
     width: 100%;
@@ -237,10 +231,44 @@ li {
 }
 
 .portfolio__card-summary {
-  flex: 1;
-  padding: 10px;
+  background-color: @CYAN3;
+  box-sizing: border-box;
+  height: 100%;
+  opacity: 0;
+  padding: 20px 30px;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  visibility: none;
+
+  &:hover {
+    opacity: .9;
+  }
+
   h4 {
     margin-top: 5px;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+
+.portfolio__see-more {
+  background: transparent;
+  border: 2px solid @CYAN9;
+  border-radius: 8px;
+  font-size: 1em;
+  text-align: center;
+  transition: background 0.2s ease;
+  padding: 10px 5px;
+
+  &:hover {
+    background-color: @CYAN5;
+    cursor: pointer;
   }
 }
 
