@@ -57,6 +57,7 @@
               <a href="https://monstermayhem.dance">
                 <button class="portfolio__see-more">
                   View Project
+                  <i class="fas fa-angle-right"></i>
                 </button>
               </a>
             </div>
@@ -231,7 +232,8 @@ li {
 }
 
 .portfolio__card-summary {
-  background-color: @CYAN3;
+  background-color: @CYAN9;
+  color: white;
   box-sizing: border-box;
   height: 100%;
   opacity: 0;
@@ -242,32 +244,52 @@ li {
   width: 100%;
   visibility: none;
 
+  a {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    text-align: center;
+  }
+
   &:hover {
     opacity: .9;
+
+    a {
+      animation-delay: .1s;
+      animation-duration: .1s;
+      animation-fill-mode: forwards;
+      animation-name: anchor;
+      height: auto;
+    }
   }
 
   h4 {
     margin-top: 5px;
     text-align: center;
   }
-
-  a {
-    display: block;
-    text-align: center;
-  }
 }
 
 .portfolio__see-more {
   background: transparent;
-  border: 2px solid @CYAN9;
+  border: 2px solid @CYAN6;
   border-radius: 8px;
+  color: white;
   font-size: 1em;
   text-align: center;
   transition: background 0.2s ease;
-  padding: 10px 5px;
+  padding: 10px 10px;
+
+  i {
+    font-size: 22px;
+    margin-top: -2px;
+    margin-left: 5px;
+    position: relative;
+    top: 3px
+  }
 
   &:hover {
-    background-color: @CYAN5;
+    background-color: @CYAN6;
     cursor: pointer;
   }
 }
@@ -315,6 +337,15 @@ li {
 
   i {
     font-size: 60px;
+  }
+}
+
+@keyframes anchor {
+  0% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: initial;
   }
 }
 
