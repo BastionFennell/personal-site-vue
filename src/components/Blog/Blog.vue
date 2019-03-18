@@ -41,6 +41,11 @@ h3 {
   padding-top: 100px;
 }
 
+
+.blog__post-list {
+  padding: 0 10px;
+}
+
 .blog__post {
   margin: 20px auto;
 }

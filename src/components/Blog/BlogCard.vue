@@ -15,7 +15,14 @@
         {{post.description}}
       </div>
       <div class="blog-card__time-to-read">
-        {{post.timeToRead}} read
+        <div class="blog-card__time-to-read-text">
+          {{post.timeToRead}} read
+        </div>
+        <a v-bind:href="post.link">
+          <button class="blog-card__see-more small">
+            View Post
+          </button>
+        </a>
       </div>
     </div>
     <div class="blog-card__secondary">
@@ -54,9 +61,11 @@ h4 {
   background: white;
   border-radius: 8px;
   display: flex;
+  font-size: 18px;
   max-width: 800px;
   padding: 20px;
 }
+
 .blog-card__main {
   align-items: flex-start;
   display: flex;
@@ -75,9 +84,16 @@ h4 {
   padding-left: 15px;
 }
 
+@media (max-width: 600px) {
+  .blog-card__secondary {
+    display: none;
+  }
+}
+
 .blog-card__tags {
   display: flex;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 .blog-card__tag {
@@ -85,14 +101,36 @@ h4 {
   border-radius: 8px;
   padding: 5px 10px;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .blog-card__description {
   margin-bottom: 10px;
 }
 
+@media (max-width: 600px) {
+  .blog-card__description {
+    display: none;
+  }
+}
+
 .blog-card__time-to-read {
   color: @GRAY6;
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .blog-card__time-to-read {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .blog-card__time-to-read-text {
+    margin-bottom: 5px;
+  }
 }
 
 .blog-card__see-more {
@@ -106,10 +144,20 @@ h4 {
   outline: none;
   padding: 10px 10px;
 
+  &.small {
+    display: none;
+  }
+
   &:hover {
     background: @CYAN6;
     border-color: @CYAN6;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card__see-more.small {
+    display: inline-block;
   }
 }
 
