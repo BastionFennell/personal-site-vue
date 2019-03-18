@@ -9,7 +9,7 @@ yarn build
 # navigate into the build output directory
 cd dist
 
-echo "bastionfennell.com" >> CNAME
+echo "bastionthe.dev" >> CNAME
 git init
 git add -A
 git commit -m 'deploy'
