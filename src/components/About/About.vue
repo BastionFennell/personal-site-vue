@@ -2,7 +2,7 @@
   <div class="about">
     <div class="by-day-by-night">
       <h2>Developer by Day</h2>
-      <Programmer />
+      <Programmer class="about__programmer" />
       <div class="card">
         <h3>Hi! I'm Bastion!</h3>
         <p>
@@ -123,6 +123,12 @@ export default class About extends Vue {}
 
 <style scoped lang="less">
 @import "../../lib/colors.less";
+
+.about__programmer {
+  max-width: 800px;
+  max-height: 240px;
+  margin: 0 auto;
+}
 
 .by-day-by-night {
   background: @CYAN1;
