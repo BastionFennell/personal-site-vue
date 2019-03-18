@@ -5,7 +5,7 @@
       <Programmer />
       <div class="card">
         <h3> Hi! I'm Bastion! </h3>
-        <p> I'm a <strong>UI Lead</strong> based out of <strong>Austin, TX</strong>.
+        <p> I'm a <strong>UI Developer</strong> based out of <strong>Austin, TX</strong>.
           My focus is developing <strong>software for humans</strong>, both the end users and other programmers in my projects.
         </p>
         <p>
@@ -77,6 +77,7 @@
         </div>
       </div>
     </div>
+    <Blog />
     <div class="contact">
       <h3> How can you get in touch? </h3>
       <div class="contact__icons">
@@ -100,9 +101,11 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Programmer from "./Programmer.vue";
+import Blog from "@/components/Blog";
 
 @Component({
   components: {
+    Blog,
     Programmer,
   }
 })
@@ -119,6 +122,7 @@ export default class About extends Vue {}
   padding-bottom: 30px;
   padding-top: 60px;
   position: relative;
+  z-index: 2;
 }
 
 .by-day-by-night::after {
@@ -186,9 +190,23 @@ li {
   font-size: 18px;
   padding-bottom: 80px;
   padding-top: 80px;
+  position: relative;
+  z-index: 1;
 
   h3 {
     text-align: center;
+  }
+
+  &::after {
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+    border-width: 60px 100vw 0 0;
+    bottom: -60px;
+    content: " ";
+    display: block;
+    left: 0;
+    overflow-x: hidden;
+    position: absolute;
   }
 }
 

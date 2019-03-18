@@ -1,0 +1,26 @@
+[
+    {
+        "title": "I'm Bastion Fennell, and I support women devs.",
+        "tags": ["#shecoded"],
+        "date": "Mar 8, 2019",
+        "description": "For international women's day, I will advocate for gender equality and use what privelege I have as a platform for equality.",
+        "link": "https://dev.to/bastionthedev/im-bastion-fennell-and-i-support-women-devs-6pm",
+        "timeToRead": "2 min"
+    },
+    {
+        "title": "Learning with Clicker Games Part 1: HTML",
+        "tags": ["#html", "#beginner", "#webdev"],
+        "date": "Mar 5, 2019",
+        "description": "Tired of building todo apps? Try this quick introduction to web dev with idle games! This covers HTML as part one of a three part series.",
+        "link": "https://dev.to/bastionthedev/learning-with-clicker-games-part-1-html-1i4b",
+        "timeToRead": "1 min"
+    },
+    {
+        "title": "Software Development for Humans",
+        "tags": ["#career", "#discuss"],
+        "date": "Feb 28, 2019",
+        "description": "We work with humans all day everyday. I think it's time we start considering the oft ignored second end user of our code: other developers.",
+        "link": "https://dev.to/bastionthedev/learning-with-clicker-games-part-1-html-1i4b://dev.to/bastionthedev/software-development-for-humans-5bi9",
+        "timeToRead": "3 min"
+    }
+]
