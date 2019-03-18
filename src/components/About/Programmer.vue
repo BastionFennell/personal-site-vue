@@ -52,7 +52,7 @@ export default class Programmer extends Vue {}
 }
 
 .right-arm-upper {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: right-arm-upper;
   background-color: @CYAN6;
@@ -67,7 +67,7 @@ export default class Programmer extends Vue {}
 }
 
 .right-arm-lower {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: right-arm-lower;
   background-color: @CYAN6;
@@ -82,7 +82,7 @@ export default class Programmer extends Vue {}
 }
 
 .left-arm-upper {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: left-arm-upper;
   background-color: @CYAN6;
@@ -97,7 +97,7 @@ export default class Programmer extends Vue {}
 }
 
 .left-arm-lower {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: left-arm-lower;
   background-color: @CYAN6;
@@ -112,7 +112,7 @@ export default class Programmer extends Vue {}
 }
 
 .laptop-top {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: laptop-top;
   background-color: @GRAY6;
@@ -126,7 +126,7 @@ export default class Programmer extends Vue {}
 }
 
 .laptop-bottom {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-name: laptop-bottom;
   background-color: @GRAY6;
@@ -150,7 +150,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes left-arm-lower {
-  0%  {
+  0% {
     top: 23%;
     transform: rotate(20deg);
   }
@@ -165,7 +165,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes left-arm-upper {
-  0%  {
+  0% {
     top: 35%;
     transform: rotate(-20deg);
   }
@@ -180,7 +180,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes right-arm-lower {
-  0%  {
+  0% {
     top: 57%;
     transform: rotate(20deg);
   }
@@ -195,7 +195,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes right-arm-upper {
-  0%  {
+  0% {
     top: 46%;
     transform: rotate(-20deg);
   }
@@ -210,7 +210,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes laptop-top {
-  3%  {
+  3% {
     top: 57%;
     transform: rotate(-5deg);
   }
@@ -229,7 +229,7 @@ export default class Programmer extends Vue {}
 }
 
 @keyframes laptop-bottom {
-  3%  {
+  3% {
     top: 97%;
     transform: rotate(-5deg);
   }
@@ -246,5 +246,4 @@ export default class Programmer extends Vue {}
     transform: rotate(0deg);
   }
 }
-
 </style>

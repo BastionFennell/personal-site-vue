@@ -1,17 +1,23 @@
 <template>
   <div class="about">
     <div class="by-day-by-night">
-      <h2> Developer by Day </h2>
+      <h2>Developer by Day</h2>
       <Programmer />
       <div class="card">
-        <h3> Hi! I'm Bastion! </h3>
-        <p> I'm a <strong>UI Developer</strong> based out of <strong>Austin, TX</strong>.
-          My focus is developing <strong>software for humans</strong>, both the end users and other programmers in my projects.
+        <h3>Hi! I'm Bastion!</h3>
+        <p>
+          I'm a <strong>UI Developer</strong> based out of
+          <strong>Austin, TX</strong>. My focus is developing
+          <strong>software for humans</strong>, both the end users and other
+          programmers in my projects.
         </p>
         <p>
-          As a lead, I aim to build a team that is <strong>Radically Candid</strong>.
-          A team that not only <strong>executes</strong>, but one that continues to <strong>learn</strong> and <strong>grow</strong>.
-          I think of myself as a <strong>big band developer</strong> rather than a rock star, part of a team that works well together and ships quality software.
+          As a lead, I aim to build a team that is
+          <strong>Radically Candid</strong>. A team that not only
+          <strong>executes</strong>, but one that continues to
+          <strong>learn</strong> and <strong>grow</strong>. I think of myself as
+          a <strong>big band developer</strong> rather than a rock star, part of
+          a team that works well together and ships quality software.
         </p>
         <p class="card__label">
           I also think of myself as a:
@@ -39,39 +45,42 @@
       </div>
     </div>
     <div class="portfolio">
-      <h3> What have I done recently? </h3>
+      <h3>What have I done recently?</h3>
       <div class="portfolio__grid">
         <div class="portfolio__card">
-            <div class="portfolio__card-picture">
-              <img src="./monster-mayhem.png" alt="Monster Mayhem WCS"/>
-            </div>
-            <div class="portfolio__card-summary">
-                <h4> Monster Mayhem </h4>
-                <p>
-                  A weekend long dance event that I built and organize.
-                  I <strong>designed the layout</strong> of the site,
-                  built the site using <strong>React.js</strong>,
-                  and deployed the site using Amazon <strong>S3</strong> and <strong>Cloudfront</strong>.
-                  I also handled the social media and marketing for the event.
-                </p>
-              <a href="https://monstermayhem.dance">
-                <button class="portfolio__see-more">
-                  View Project
-                  <i class="fas fa-angle-right"></i>
-                </button>
-              </a>
-            </div>
+          <div class="portfolio__card-picture">
+            <img src="./monster-mayhem.png" alt="Monster Mayhem WCS" />
+          </div>
+          <div class="portfolio__card-summary">
+            <h4>Monster Mayhem</h4>
+            <p>
+              A weekend long dance event that I built and organize. I
+              <strong>designed the layout</strong> of the site, built the site
+              using <strong>React.js</strong>, and deployed the site using
+              Amazon <strong>S3</strong> and <strong>Cloudfront</strong>. I also
+              handled the social media and marketing for the event.
+            </p>
+            <a href="https://monstermayhem.dance">
+              <button class="portfolio__see-more">
+                View Project
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </a>
+          </div>
         </div>
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
-            <img src="./clicker.gif" alt="Code Clicker"/>
+            <img src="./clicker.gif" alt="Code Clicker" />
           </div>
           <div class="portfolio__card-summary">
-            <h4> Code Clicker </h4>
-            <p> A small clicker game in vanilla JS.
-              I <strong>mentored</strong> two developers as they built the initial game,
-              then used what we built as the basis for a series of <strong>blog posts</strong> that
-              aimed to introduce new developers to <strong>HTML</strong>, <strong>CSS</strong>, and <strong>vanilla Javascript</strong>.
+            <h4>Code Clicker</h4>
+            <p>
+              A small clicker game in vanilla JS. I
+              <strong>mentored</strong> two developers as they built the initial
+              game, then used what we built as the basis for a series of
+              <strong>blog posts</strong> that aimed to introduce new developers
+              to <strong>HTML</strong>, <strong>CSS</strong>, and
+              <strong>vanilla Javascript</strong>.
             </p>
           </div>
         </div>
@@ -79,7 +88,7 @@
     </div>
     <Blog />
     <div class="contact">
-      <h3> How can you get in touch? </h3>
+      <h3>How can you get in touch?</h3>
       <div class="contact__icons">
         <a href="https://twitter.com/bastionthedev">
           <i class="fab fa-twitter-square"></i>
@@ -106,10 +115,9 @@ import Blog from "@/components/Blog";
 @Component({
   components: {
     Blog,
-    Programmer,
+    Programmer
   }
 })
-
 export default class About extends Vue {}
 </script>
 
@@ -271,11 +279,11 @@ li {
   }
 
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
 
     a {
-      animation-delay: .1s;
-      animation-duration: .1s;
+      animation-delay: 0.1s;
+      animation-duration: 0.1s;
       animation-fill-mode: forwards;
       animation-name: anchor;
       height: auto;
@@ -303,7 +311,7 @@ li {
     margin-top: -2px;
     margin-left: 5px;
     position: relative;
-    top: 3px
+    top: 3px;
   }
 
   &:hover {
@@ -366,5 +374,4 @@ li {
     pointer-events: initial;
   }
 }
-
 </style>

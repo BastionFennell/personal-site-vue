@@ -41,9 +41,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
-@Component()
+@Component({})
 export default class BlogPost extends Vue {
-  @Prop() post!: Array;
+  @Prop() post!: Array<Object>;
 }
 
 </script>
