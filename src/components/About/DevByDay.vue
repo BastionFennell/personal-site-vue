@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="by-day-by-night">
-      <Programmer class="about__programmer" />
+    <div class="dev-by-day">
+      <Programmer class="dev-by-day__programmer" />
       <div class="card">
         <h3>Hi! I'm Bastion!</h3>
         <p>
@@ -117,37 +117,21 @@ import Blog from "@/components/Blog";
     Blog,
     LightSwitch,
     Programmer
-  },
-  data: function() {
-    return {
-      isDay: "true"
-    }
-  },
-  methods: {
-    toggleDay: function() {
-      console.log(this.isDay);
-      if (this.isDay === "true") {
-        this.isDay = "false";
-      } else {
-        this.isDay = "true";
-      }
-    }
   }
 })
-export default class About extends Vue {}
+export default class DevByDay extends Vue {}
 </script>
 
 <style scoped lang="less">
 @import "../../lib/colors.less";
 
-.about__programmer {
+.dev-by-day__programmer {
   max-width: 800px;
   max-height: 240px;
   margin: 0 auto;
 }
 
-.by-day-by-night {
-  background: @CYAN1;
+.dev-by-day {
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 60px;
@@ -155,7 +139,7 @@ export default class About extends Vue {}
   z-index: 2;
 }
 
-.by-day-by-night::after {
+.dev-by-day::after {
   border-color: @CYAN1 transparent transparent transparent;
   border-style: solid;
   border-width: 60px 100vw 0 0;
@@ -185,7 +169,6 @@ h3 {
   max-width: 800px;
   min-height: 500px;
   padding: 20px;
-  text-align: center;
 }
 
 @media (min-width: 700px) {
@@ -197,6 +180,7 @@ h3 {
 .card__label {
   margin-bottom: 0;
   margin-top: 2em;
+  text-align: center;
 }
 
 strong {
@@ -208,6 +192,7 @@ ul {
   list-style-type: none;
   margin-top: 10px;
   padding: 0;
+  text-align: center;
 }
 
 li {

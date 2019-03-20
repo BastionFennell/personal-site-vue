@@ -45,7 +45,7 @@ h2 {
 }
 
 .light-switch {
-  background: @CYAN9;
+  background: @CYAN7;
   border: none;
   border-radius: 150px;
   display: block;
