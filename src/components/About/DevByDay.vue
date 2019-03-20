@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="dev-by-day">
+  <div class="container">
+    <div class="dev-by-day" v-bind:class="{ day: isDay }">
       <programmer class="dev-by-day__programmer" />
       <div class="card">
         <h3>hi! i'm bastion!</h3>
@@ -90,7 +90,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import Programmer from "./Programmer.vue";
 import LightSwitch from "./LightSwitch.vue";
 import Blog from "@/components/Blog";
@@ -102,11 +102,17 @@ import Blog from "@/components/Blog";
     Programmer
   }
 })
-export default class DevByDay extends Vue {}
+export default class DevByDay extends Vue {
+  @Prop() isDay!: boolean;
+}
 </script>
 
 <style scoped lang="less">
 @import "../../lib/colors.less";
+
+.container {
+  background: @CYAN3;
+}
 
 .dev-by-day__programmer {
   max-width: 800px;
@@ -115,11 +121,17 @@ export default class DevByDay extends Vue {}
 }
 
 .dev-by-day {
+  background: @CYAN9;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 60px;
   position: relative;
+  transition: background 0.3s ease;
   z-index: 2;
+
+  &.day {
+    background: @CYAN1;
+  }
 }
 
 .dev-by-day::after {

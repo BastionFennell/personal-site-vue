@@ -1,8 +1,8 @@
 <template>
   <div class="blog">
-    <h3> What do I Think About Things? </h3>
+    <h3>What do I Think About Things?</h3>
     <div class="blog__post-list">
-      <div v-for="post in posts">
+      <div v-for="post in posts" :key="post.title">
         <BlogCard class="blog__post" v-bind:post="post" />
       </div>
     </div>
@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import BlogCard from './BlogCard.vue';
+import BlogCard from "./BlogCard.vue";
 import posts from "./posts.json";
 
 @Component({
@@ -19,7 +19,6 @@ import posts from "./posts.json";
     BlogCard
   }
 })
-
 export default class Blog extends Vue {
   data() {
     return { posts };
@@ -41,7 +40,6 @@ h3 {
   padding-top: 100px;
 }
 
-
 .blog__post-list {
   padding: 0 10px;
 }
@@ -49,5 +47,4 @@ h3 {
 .blog__post {
   margin: 20px auto;
 }
-
 </style>

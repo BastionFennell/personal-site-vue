@@ -6,7 +6,7 @@
       v-bind:onToggle="toggleDay"
     />
     <div class="about__slider" v-bind:class="{ day: isDay }">
-      <DevByDay class="about__dev-by-day" />
+      <DevByDay class="about__dev-by-day" v-bind:isDay="isDay" />
       <DancerByNight class="about__dancer-by-night" />
     </div>
     <div class="contact">
