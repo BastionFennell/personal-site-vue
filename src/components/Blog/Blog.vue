@@ -36,11 +36,17 @@ h3 {
 
 .blog {
   background: @CYAN3;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 100px;
   padding-top: 100px;
 }
 
 .blog__post-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
   padding: 0 10px;
 }
 

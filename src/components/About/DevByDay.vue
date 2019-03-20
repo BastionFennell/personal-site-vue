@@ -1,20 +1,20 @@
 <template>
   <div class="container">
     <div class="dev-by-day" v-bind:class="{ day: isDay }">
-      <programmer class="dev-by-day__programmer" />
+      <Programmer class="dev-by-day__programmer" />
       <div class="card">
-        <h3>hi! i'm bastion!</h3>
+        <h3>Hi! I'm Bastion!</h3>
         <p>
-          i'm a <strong>ui developer</strong> based out of
-          <strong>austin, tx</strong>. my focus is developing
+          I'm a <strong>UI Developer</strong> based out of
+          <strong>Austin, TX</strong>. my focus is developing
           <strong>software for humans</strong>, both the end users and other
           programmers in my projects.
         </p>
         <p>
-          as a lead, i aim to build a team that is
-          <strong>radically candid</strong>. a team that not only
+          As a lead, I aim to build a team that is
+          <strong>Radically Candid</strong>. A team that not only
           <strong>executes</strong>, but one that continues to
-          <strong>learn</strong> and <strong>grow</strong>. i think of myself as
+          <strong>learn</strong> and <strong>grow</strong>. I think of myself as
           a <strong>big band developer</strong> rather than a rock star, part of
           a team that works well together and ships quality software.
         </p>
@@ -23,45 +23,45 @@
         </p>
         <ul>
           <li>
-            builder of communities
+            Builder of communities
           </li>
           <li>
-            reluctant weightlifter
+            Reluctant weightlifter
           </li>
           <li>
-            occasional blogger
+            Occasional blogger
           </li>
           <li>
-            mentor and coach
+            Mentor and coach
           </li>
           <li>
-            vim advocate
+            Vim advocate
           </li>
           <li>
-            cat dad
+            Cat dad
           </li>
         </ul>
       </div>
     </div>
     <div class="portfolio">
-      <h3>what have i done recently?</h3>
+      <h3>What have I done recently?</h3>
       <div class="portfolio__grid">
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
-            <img src="./monster-mayhem.png" alt="monster mayhem wcs" />
+            <img src="./monster-mayhem.png" alt="Monster Mayhem WCS" />
           </div>
           <div class="portfolio__card-summary">
-            <h4>monster mayhem</h4>
+            <h4>Monster Mayhem</h4>
             <p>
-              a weekend long dance event that i built and organize. i
+              A weekend long dance event that I built and organize. I
               <strong>designed the layout</strong> of the site, built the site
               using <strong>react.js</strong>, and deployed the site using
-              amazon <strong>s3</strong> and <strong>cloudfront</strong>. i also
+              Amazon <strong>S3</strong> and <strong>Cloudfront</strong>. I also
               handled the social media and marketing for the event.
             </p>
             <a href="https://monstermayhem.dance">
               <button class="portfolio__see-more">
-                view project
+                View Project
                 <i class="fas fa-angle-right"></i>
               </button>
             </a>
@@ -69,23 +69,23 @@
         </div>
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
-            <img src="./clicker.gif" alt="code clicker" />
+            <img src="./clicker.gif" alt="Code Clicker" />
           </div>
           <div class="portfolio__card-summary">
-            <h4>code clicker</h4>
+            <h4>Code Clicker</h4>
             <p>
-              a small clicker game in vanilla js. i
+              A small clicker game in vanilla js. I
               <strong>mentored</strong> two developers as they built the initial
               game, then used what we built as the basis for a series of
               <strong>blog posts</strong> that aimed to introduce new developers
-              to <strong>html</strong>, <strong>css</strong>, and
+              to <strong>HTML</strong>, <strong>CSS</strong>, and
               <strong>vanilla javascript</strong>.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <blog />
+    <Blog class="dev-by-day__blog" />
   </div>
 </template>
 
@@ -112,6 +112,8 @@ export default class DevByDay extends Vue {
 
 .container {
   background: @CYAN3;
+  display: flex;
+  flex-direction: column;
 }
 
 .dev-by-day__programmer {
@@ -319,6 +321,10 @@ li {
     background-color: @CYAN6;
     cursor: pointer;
   }
+}
+
+.dev-by-day__blog {
+  flex-grow: 1;
 }
 
 @keyframes anchor {

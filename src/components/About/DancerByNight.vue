@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="videos">
-      <h3>What does your dancing look like?</h3>
+      <h3>What does my dancing look like?</h3>
       <div class="videos__list">
         <div class="videos__video">
           <iframe
@@ -132,6 +132,8 @@ li {
 
 .container {
   background: @CYAN7;
+  display: flex;
+  flex-direction: column;
 }
 
 .dancer-by-night {
@@ -217,15 +219,24 @@ li {
 }
 
 .videos {
+  flex-direction: column;
+  display: flex;
   background: @CYAN7;
   color: white;
+  flex-grow: 1;
   padding-top: 80px;
 }
 
 .videos__list {
-  max-width: 800px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
   margin: 0 auto;
+  max-width: 800px;
   padding: 0 20px 20px 20px;
+  width: 100%;
 }
 
 .videos__video {
