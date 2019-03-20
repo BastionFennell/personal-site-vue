@@ -1,5 +1,6 @@
 <template>
-  <div class="dancer-by-night">
+  <div>
+    <div class="dancer-by-night">
       <Dancers class="dancer-by-night__dancers" />
       <div class="card">
         <h3>Hi! I'm Bastion!</h3>
@@ -38,6 +39,47 @@
           <li>MCing throughout the weekend</li>
         </ul>
       </div>
+    </div>
+    <div class="west-coast-swing">
+      <div class="west-coast-swing__text">
+        <h3>What is West Coast Swing?</h3>
+        <p>
+          West Coast Swing is a partner danced based heavily on
+          Lindy Hop. It gets it's unique look and feel from the
+          elastic connection and the fact that it's a slotted dance,
+          like salsa.
+        </p>
+        <p>
+          Most importantly for me, WCS is a social dance. It
+          relies on lead-follow rather than choreography, so you
+          can dance with anyone. Even the competitions are
+          lead-follow. Due to it's social nature, the dance has
+          also grown and evolved with modern music trends and
+          dancing trends. We dance to everything from blues music
+          to top 40s!
+        </p>
+        <p>
+          I came to West Coast Swing after trying competitive
+          country dancing. Aside from it just being cheaper for
+          a college student like I was, what made me fall in
+          love with the dance was the community. Everyone is
+          welcoming, we all dance with each other and hang out
+          at the big competitions. This dance has given me the
+          chance to make incredible friends all over the world!
+        </p>
+      </div>
+    </div>
+    <div class="videos">
+      <h3>What does your dancing look like?</h3>
+      <div class="videos__list">
+        <div class="videos__video">
+          <iframe src="https://www.youtube.com/embed/1PNnLQCaTpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="videos__video">
+          <iframe src="https://www.youtube.com/embed/u6AsoQvW0mI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,6 +111,7 @@ h2 {
 
 h3 {
   font-size: 24px;
+  text-align: center;
 }
 
 ul {
@@ -83,11 +126,24 @@ li {
 }
 
 .dancer-by-night {
+  font-size: 18px;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 60px;
   position: relative;
   z-index: 2;
+}
+
+.dancer-by-night::after {
+  border-color: @CYAN9 transparent transparent transparent;
+  border-style: solid;
+  border-width: 60px 100vw 0 0;
+  bottom: -60px;
+  content: " ";
+  display: block;
+  left: 0;
+  overflow-x: hidden;
+  position: absolute;
 }
 
 .dancer-by-night__dancers {
@@ -99,7 +155,7 @@ li {
 .card {
   background: transparent;
   border-radius: 8px;
-  font-size: 18px;
+  color: white;
   margin: 0 auto;
   max-width: 800px;
   min-height: 500px;
@@ -109,6 +165,7 @@ li {
 @media (min-width: 700px) {
   .card {
     background: white;
+    color: inherit;
   }
 }
 
@@ -118,5 +175,56 @@ li {
   text-align: center;
 }
 
+.west-coast-swing {
+  background: @GRAY8;
+  color: white;
+  font-size: 18px;
+  padding: 80px 20px;
+  position: relative;
 
+  &::after {
+    border-color: @GRAY8 transparent transparent transparent;
+    border-style: solid;
+    border-width: 60px 100vw 0 0;
+    bottom: -60px;
+    content: " ";
+    display: block;
+    left: 0;
+    overflow-x: hidden;
+    position: absolute;
+  }
+}
+
+.west-coast-swing__text {
+  margin: 0 auto;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.videos {
+  color: white;
+  padding-top: 80px;
+}
+
+.videos__list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.videos__video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 40px 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

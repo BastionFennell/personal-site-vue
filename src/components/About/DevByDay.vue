@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="dev-by-day">
-      <Programmer class="dev-by-day__programmer" />
+      <programmer class="dev-by-day__programmer" />
       <div class="card">
-        <h3>Hi! I'm Bastion!</h3>
+        <h3>hi! i'm bastion!</h3>
         <p>
-          I'm a <strong>UI Developer</strong> based out of
-          <strong>Austin, TX</strong>. My focus is developing
+          i'm a <strong>ui developer</strong> based out of
+          <strong>austin, tx</strong>. my focus is developing
           <strong>software for humans</strong>, both the end users and other
           programmers in my projects.
         </p>
         <p>
-          As a lead, I aim to build a team that is
-          <strong>Radically Candid</strong>. A team that not only
+          as a lead, i aim to build a team that is
+          <strong>radically candid</strong>. a team that not only
           <strong>executes</strong>, but one that continues to
-          <strong>learn</strong> and <strong>grow</strong>. I think of myself as
+          <strong>learn</strong> and <strong>grow</strong>. i think of myself as
           a <strong>big band developer</strong> rather than a rock star, part of
           a team that works well together and ships quality software.
         </p>
@@ -23,45 +23,45 @@
         </p>
         <ul>
           <li>
-            Builder of communities
+            builder of communities
           </li>
           <li>
-            Reluctant weightlifter
+            reluctant weightlifter
           </li>
           <li>
-            Occasional blogger
+            occasional blogger
           </li>
           <li>
-            Mentor and coach
+            mentor and coach
           </li>
           <li>
-            Vim advocate
+            vim advocate
           </li>
           <li>
-            Cat dad
+            cat dad
           </li>
         </ul>
       </div>
     </div>
     <div class="portfolio">
-      <h3>What have I done recently?</h3>
+      <h3>what have i done recently?</h3>
       <div class="portfolio__grid">
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
-            <img src="./monster-mayhem.png" alt="Monster Mayhem WCS" />
+            <img src="./monster-mayhem.png" alt="monster mayhem wcs" />
           </div>
           <div class="portfolio__card-summary">
-            <h4>Monster Mayhem</h4>
+            <h4>monster mayhem</h4>
             <p>
-              A weekend long dance event that I built and organize. I
+              a weekend long dance event that i built and organize. i
               <strong>designed the layout</strong> of the site, built the site
-              using <strong>React.js</strong>, and deployed the site using
-              Amazon <strong>S3</strong> and <strong>Cloudfront</strong>. I also
+              using <strong>react.js</strong>, and deployed the site using
+              amazon <strong>s3</strong> and <strong>cloudfront</strong>. i also
               handled the social media and marketing for the event.
             </p>
             <a href="https://monstermayhem.dance">
               <button class="portfolio__see-more">
-                View Project
+                view project
                 <i class="fas fa-angle-right"></i>
               </button>
             </a>
@@ -69,40 +69,23 @@
         </div>
         <div class="portfolio__card">
           <div class="portfolio__card-picture">
-            <img src="./clicker.gif" alt="Code Clicker" />
+            <img src="./clicker.gif" alt="code clicker" />
           </div>
           <div class="portfolio__card-summary">
-            <h4>Code Clicker</h4>
+            <h4>code clicker</h4>
             <p>
-              A small clicker game in vanilla JS. I
+              a small clicker game in vanilla js. i
               <strong>mentored</strong> two developers as they built the initial
               game, then used what we built as the basis for a series of
               <strong>blog posts</strong> that aimed to introduce new developers
-              to <strong>HTML</strong>, <strong>CSS</strong>, and
-              <strong>vanilla Javascript</strong>.
+              to <strong>html</strong>, <strong>css</strong>, and
+              <strong>vanilla javascript</strong>.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <Blog />
-    <div class="contact">
-      <h3>How can you get in touch?</h3>
-      <div class="contact__icons">
-        <a href="https://twitter.com/bastionthedev">
-          <i class="fab fa-twitter-square"></i>
-        </a>
-        <a href="https://github.com/bastionfennell">
-          <i class="fab fa-github-square"></i>
-        </a>
-        <a href="mailto:bastion@bastionthe.dev">
-          <i class="fas fa-envelope-square"></i>
-        </a>
-        <a href="https://dev.to/bastionthedev">
-          <i class="fab fa-dev"></i>
-        </a>
-      </div>
-    </div>
+    <blog />
   </div>
 </template>
 
@@ -323,52 +306,6 @@ li {
   &:hover {
     background-color: @CYAN6;
     cursor: pointer;
-  }
-}
-
-.contact {
-  background: @CYAN8;
-  color: white;
-  padding-bottom: 100px;
-  padding-top: 40px;
-  position: relative;
-
-  h3 {
-    margin: 0;
-    text-align: center;
-  }
-
-  &::before {
-    border-color: transparent transparent @CYAN8 transparent;
-    border-style: solid;
-    border-width: 0 0 60px 100vw;
-    top: -59px;
-    content: " ";
-    display: block;
-    left: 0;
-    position: absolute;
-  }
-}
-
-.contact__icons {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  margin: 30px auto;
-  max-width: 800px;
-
-  a {
-    color: white;
-    text-decoration: none !important;
-    transition: color 0.4s ease;
-
-    &:hover {
-      color: @CYAN3;
-    }
-  }
-
-  i {
-    font-size: 60px;
   }
 }
 
