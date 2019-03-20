@@ -155,7 +155,7 @@ li {
   border-color: @CYAN9 transparent transparent transparent;
   border-style: solid;
   border-width: 60px 100vw 0 0;
-  bottom: -60px;
+  bottom: -59px;
   content: " ";
   display: block;
   left: 0;
@@ -203,7 +203,7 @@ li {
     border-color: @GRAY8 transparent transparent transparent;
     border-style: solid;
     border-width: 60px 100vw 0 0;
-    bottom: -60px;
+    bottom: -59px;
     content: " ";
     display: block;
     left: 0;

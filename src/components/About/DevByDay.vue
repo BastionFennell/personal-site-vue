@@ -140,7 +140,7 @@ export default class DevByDay extends Vue {
   border-color: @CYAN1 transparent transparent transparent;
   border-style: solid;
   border-width: 60px 100vw 0 0;
-  bottom: -60px;
+  bottom: -59px;
   content: " ";
   display: block;
   left: 0;
@@ -213,7 +213,7 @@ li {
     border-color: white transparent transparent transparent;
     border-style: solid;
     border-width: 60px 100vw 0 0;
-    bottom: -60px;
+    bottom: -59px;
     content: " ";
     display: block;
     left: 0;

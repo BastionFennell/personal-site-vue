@@ -35,7 +35,7 @@ export default class Header extends Vue {}
   border-color: transparent white transparent transparent;
   border-style: solid;
   border-width: 0 100vw 60px 0;
-  bottom: -60px;
+  bottom: -59px;
   content: " ";
   display: block;
   left: 0;
