@@ -6,7 +6,7 @@
         <h3>Hi! I'm Bastion!</h3>
         <p>
           I'm a <strong>UI Developer</strong> based out of
-          <strong>Austin, TX</strong>. my focus is developing
+          <strong>Austin, TX</strong>. My focus is developing
           <strong>software for humans</strong>, both the end users and other
           programmers in my projects.
         </p>
