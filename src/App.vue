@@ -13,7 +13,7 @@ import About from "./components/About";
 @Component({
   components: {
     About,
-    Header,
+    Header
   }
 })
 export default class App extends Vue {}
@@ -39,7 +39,6 @@ body {
     font-size: 18px;
   }
 }
-
 
 #app {
   background: @GRAY1;

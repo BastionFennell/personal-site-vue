@@ -7,7 +7,7 @@
     />
     <div class="about__slider" v-bind:class="{ day: isDay }">
       <DevByDay class="about__dev-by-day" v-bind:isDay="isDay" />
-      <DancerByNight class="about__dancer-by-night" />
+      <DancerByNight class="about__dancer-by-night" v-bind:isDay="isDay" />
     </div>
     <div class="contact">
       <h3>How can you get in touch?</h3>

@@ -1,31 +1,28 @@
 <template>
-  <div>
-    <div class="dancer-by-night">
+  <div class="container">
+    <div class="dancer-by-night" v-bind:class="{ day: isDay }">
       <Dancers class="dancer-by-night__dancers" />
       <div class="card">
         <h3>Hi! I'm Bastion!</h3>
         <p>
-          I'm a <strong>West Coast Swing</strong> dancer and
-          teacher based out of <strong>Austin, TX</strong>. I
-          dance competitively all around the US in the
-          <strong>Advanced</strong> division, the second highest
+          I'm a <strong>West Coast Swing</strong> dancer and teacher based out
+          of <strong>Austin, TX</strong>. I dance competitively all around the
+          US in the <strong>Advanced</strong> division, the second highest
           competitive division.
         </p>
         <p>
-          As a dancer, I believe it's crucial to give back and
-          support the community that has given me so much and
-          made my evenings much more enjoyable. I support the
-          local community through <strong>teaching</strong> both
-          <strong>private lessons</strong> and a weekly
-          <strong>group class</strong>.
+          As a dancer, I believe it's crucial to give back and support the
+          community that has given me so much and made my evenings much more
+          enjoyable. I support the local community through
+          <strong>teaching</strong> both <strong>private lessons</strong> and a
+          weekly <strong>group class</strong>.
         </p>
         <p>
           I also have a yearly weekend long event called
-          <strong>Monster Mayhem</strong> that was put together
-          to help grow the community. For this event, we fly in
-          out of state pros and put together a weekend full of
-          workshops for the local community. In 2019, our event
-          brought in around <strong>100 participants</strong>.
+          <strong>Monster Mayhem</strong> that was put together to help grow the
+          community. For this event, we fly in out of state pros and put
+          together a weekend full of workshops for the local community. In 2019,
+          our event brought in around <strong>100 participants</strong>.
         </p>
         <p class="card__label">
           Some of the things I did for this event were:
@@ -44,28 +41,24 @@
       <div class="west-coast-swing__text">
         <h3>What is West Coast Swing?</h3>
         <p>
-          West Coast Swing is a partner danced based heavily on
-          Lindy Hop. It gets it's unique look and feel from the
-          elastic connection and the fact that it's a slotted dance,
-          like salsa.
+          West Coast Swing is a partner danced based heavily on Lindy Hop. It
+          gets it's unique look and feel from the elastic connection and the
+          fact that it's a slotted dance, like salsa.
         </p>
         <p>
-          Most importantly for me, WCS is a social dance. It
-          relies on lead-follow rather than choreography, so you
-          can dance with anyone. Even the competitions are
-          lead-follow. Due to it's social nature, the dance has
-          also grown and evolved with modern music trends and
-          dancing trends. We dance to everything from blues music
-          to top 40s!
+          Most importantly for me, WCS is a social dance. It relies on
+          lead-follow rather than choreography, so you can dance with anyone.
+          Even the competitions are lead-follow. Due to it's social nature, the
+          dance has also grown and evolved with modern music trends and dancing
+          trends. We dance to everything from blues music to top 40s!
         </p>
         <p>
-          I came to West Coast Swing after trying competitive
-          country dancing. Aside from it just being cheaper for
-          a college student like I was, what made me fall in
-          love with the dance was the community. Everyone is
-          welcoming, we all dance with each other and hang out
-          at the big competitions. This dance has given me the
-          chance to make incredible friends all over the world!
+          I came to West Coast Swing after trying competitive country dancing.
+          Aside from it just being cheaper for a college student like I was,
+          what made me fall in love with the dance was the community. Everyone
+          is welcoming, we all dance with each other and hang out at the big
+          competitions. This dance has given me the chance to make incredible
+          friends all over the world!
         </p>
       </div>
     </div>
@@ -73,10 +66,20 @@
       <h3>What does your dancing look like?</h3>
       <div class="videos__list">
         <div class="videos__video">
-          <iframe src="https://www.youtube.com/embed/1PNnLQCaTpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/1PNnLQCaTpY"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="videos__video">
-          <iframe src="https://www.youtube.com/embed/u6AsoQvW0mI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/u6AsoQvW0mI"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -84,7 +87,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import Dancers from "./Dancers.vue";
 
 @Component({
@@ -92,7 +95,9 @@ import Dancers from "./Dancers.vue";
     Dancers
   }
 })
-export default class DancerByNight extends Vue {}
+export default class DancerByNight extends Vue {
+  @Prop() isDay!: boolean;
+}
 </script>
 
 <style scoped lang="less">
@@ -125,13 +130,23 @@ li {
   padding: 3px 0;
 }
 
+.container {
+  background: @CYAN7;
+}
+
 .dancer-by-night {
+  background: @CYAN9;
   font-size: 18px;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 60px;
   position: relative;
+  transition: background 0.3s ease;
   z-index: 2;
+
+  &.day {
+    background: @CYAN1;
+  }
 }
 
 .dancer-by-night::after {
@@ -202,6 +217,7 @@ li {
 }
 
 .videos {
+  background: @CYAN7;
   color: white;
   padding-top: 80px;
 }

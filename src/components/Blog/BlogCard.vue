@@ -2,21 +2,21 @@
   <div class="blog-card">
     <div class="blog-card__main">
       <h4>
-        {{post.title}}
+        {{ post.title }}
       </h4>
       <div class="blog-card__tags">
-        <div v-for="tag in post.tags">
+        <div v-for="tag in post.tags" :key="tag">
           <div class="blog-card__tag">
-            {{tag}}
+            {{ tag }}
           </div>
         </div>
       </div>
       <div class="blog-card__description">
-        {{post.description}}
+        {{ post.description }}
       </div>
       <div class="blog-card__time-to-read">
         <div class="blog-card__time-to-read-text">
-          {{post.timeToRead}} read
+          {{ post.timeToRead }} read
         </div>
         <a v-bind:href="post.link">
           <button class="blog-card__see-more small">
@@ -27,7 +27,7 @@
     </div>
     <div class="blog-card__secondary">
       <div class="blog-card__date">
-        {{post.date}}
+        {{ post.date }}
       </div>
       <a v-bind:href="post.link">
         <button class="blog-card__see-more">
@@ -45,7 +45,6 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class BlogPost extends Vue {
   @Prop() post!: Array<Object>;
 }
-
 </script>
 
 <style scoped lang="less">
@@ -72,7 +71,6 @@ h4 {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-
 }
 
 .blog-card__secondary {
@@ -160,5 +158,4 @@ h4 {
     display: inline-block;
   }
 }
-
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="bastion-the-x">
     <div class="title-text">
-      <h1>Bastion The<span class="name">{{ name }}</span></h1>
+      <h1>
+        Bastion The<span class="name">{{ name }}</span>
+      </h1>
       <div v-bind:style="cursorStyle" />
     </div>
   </div>
@@ -100,7 +102,7 @@ export default class BastionTheX extends Vue {
   getNewName(): string {
     let newName: string = this.fullName;
 
-    while(newName === this.fullName) {
+    while (newName === this.fullName) {
       newName = NAMES[getRandomNumber(NAMES.length)];
     }
 
