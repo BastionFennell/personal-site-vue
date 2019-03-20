@@ -138,7 +138,7 @@ h4 {
   color: white;
   font-size: 1em;
   text-align: center;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   outline: none;
   padding: 10px 10px;
 
