@@ -1,14 +1,11 @@
 <template>
-  <div
-    class="about"
-    v-bind:class="{day: isDay}"
-    >
+  <div class="about" v-bind:class="{ day: isDay }">
     <LightSwitch
       class="light-switch"
       v-bind:isDay="isDay"
       v-bind:onToggle="toggleDay"
-      />
-    <div class="about__slider" v-bind:class="{day: isDay}" >
+    />
+    <div class="about__slider" v-bind:class="{ day: isDay }">
       <DevByDay class="about__dev-by-day" />
       <DancerByNight class="about__dancer-by-night" />
     </div>
@@ -44,20 +41,16 @@ import Blog from "@/components/Blog";
   components: {
     DancerByNight,
     DevByDay,
-    LightSwitch,
-  },
-  data: function() {
-    return {
-      isDay: true
-    }
-  },
-  methods: {
-    toggleDay: function() {
-      this.isDay = !this.isDay;
-    }
+    LightSwitch
   }
 })
-export default class About extends Vue {}
+export default class About extends Vue {
+  isDay = true;
+
+  toggleDay() {
+    this.isDay = !this.isDay;
+  }
+}
 </script>
 
 <style scoped lang="less">
@@ -143,5 +136,4 @@ export default class About extends Vue {}
     font-size: 60px;
   }
 }
-
 </style>

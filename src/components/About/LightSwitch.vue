@@ -5,18 +5,15 @@
     role="switch"
     v-bind:aria-checked="isDay ? 'true' : 'false'"
     v-on:click="onToggle"
-    >
-    <div
-      class="light-switch__slide"
-      v-bind:class="{ 'is-day': isDay }"
-      >
+  >
+    <div class="light-switch__slide" v-bind:class="{ 'is-day': isDay }">
       <div class="light-switch__side day">
-        <h2 v-bind:class="{ 'is-day': isDay }">Day </h2>
+        <h2 v-bind:class="{ 'is-day': isDay }">Day</h2>
       </div>
       <div
         class="light-switch__toggle-ball"
         v-bind:class="{ 'is-day': isDay }"
-        ></div>
+      />
       <div class="light-switch__side night">
         <h2 v-bind:class="{ 'is-day': isDay }">Night</h2>
       </div>
@@ -29,10 +26,10 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import Programmer from "./Programmer.vue";
 import Blog from "@/components/Blog";
 
-@Component()
+@Component({})
 export default class About extends Vue {
   @Prop() isDay!: boolean;
-  @Prop() onToggle!: function;
+  @Prop() onToggle!: Function;
 }
 </script>
 
@@ -124,5 +121,4 @@ h2 {
     }
   }
 }
-
 </style>
