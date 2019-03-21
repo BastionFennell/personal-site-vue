@@ -75,10 +75,10 @@
         </div>
         <div class="videos__video">
           <iframe
-            src="https://www.youtube.com/embed/u6AsoQvW0mI"
+            src="https://www.youtube.com/embed/qI7JUq3vNYk"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowfullscree
           ></iframe>
         </div>
       </div>
