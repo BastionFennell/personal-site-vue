@@ -42,13 +42,13 @@
         <h3>What is West Coast Swing?</h3>
         <p>
           West Coast Swing is a partner dance based heavily on Lindy Hop. It
-          gets it's unique look and feel from the elastic connection and the
+          gets its unique look and feel from the elastic connection and the
           fact that it's a slotted dance, like salsa.
         </p>
         <p>
           Most importantly for me, WCS is a social dance. It relies on
           lead-follow rather than choreography, so you can dance with anyone.
-          Even the competitions are lead-follow. Due to it's social nature, the
+          Even the competitions are lead-follow. Due to its social nature, the
           dance has also grown and evolved with modern music and dancing trends.
           We dance to everything from blues music to top 40s!
         </p>
